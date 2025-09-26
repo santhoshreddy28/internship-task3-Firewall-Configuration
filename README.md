@@ -1,4 +1,4 @@
-# Firewall Configuration Task – Internship
+# 🔒 Firewall Configuration Task – Internship
 
 This project demonstrates how to configure and test firewall rules on **Kali Linux** using **UFW (Uncomplicated Firewall)**.
 
@@ -11,7 +11,8 @@ This project demonstrates how to configure and test firewall rules on **Kali Lin
    ```bash
    sudo ufw enable
    ```
-   📸 Screenshot: `01_firewall_enable_and_rules.png`
+   📸 Screenshot:  
+   ![Enable Firewall and Rules](screenshots/01_firewall_enable_and_rules.png)
 
 2. **List Current Rules**  
    Displayed existing rules with:  
@@ -19,7 +20,8 @@ This project demonstrates how to configure and test firewall rules on **Kali Lin
    sudo ufw status numbered
    ```
    Output showed SSH (22/tcp) allowed and Telnet (23/tcp) denied.  
-   📸 Screenshot: `01_firewall_enable_and_rules.png`
+   📸 Screenshot:  
+   ![Firewall Rules Listed](screenshots/01_firewall_enable_and_rules.png)
 
 3. **Block Telnet (Port 23)**  
    Added a deny rule:  
@@ -35,7 +37,8 @@ This project demonstrates how to configure and test firewall rules on **Kali Lin
    nc -vz localhost 23
    ```
    Both returned **Connection refused**.  
-   📸 Screenshot: `02_test_telnet_block.png`
+   📸 Screenshot:  
+   ![Test Telnet Block](screenshots/02_test_telnet_block.png)
 
 5. **Allow SSH (Port 22)**  
    Ensured SSH remained accessible:  
@@ -50,7 +53,8 @@ This project demonstrates how to configure and test firewall rules on **Kali Lin
    sudo ufw delete deny 23/tcp
    ```
    Final rules allowed only SSH (22/tcp).  
-   📸 Screenshot: `03_remove_telnet_rule.png`
+   📸 Screenshot:  
+   ![Remove Telnet Rule](screenshots/03_remove_telnet_rule.png)
 
 ---
 
